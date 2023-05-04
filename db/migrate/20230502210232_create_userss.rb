@@ -1,4 +1,4 @@
-class CreateUsers < ActiveRecord::Migration[7.0]
+class CreateUserss < ActiveRecord::Migration[7.0]
   def change
       add_column :users, :name, :string 
       add_column :users, :photo, :text
