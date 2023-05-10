@@ -1,0 +1,16 @@
+<div class="gen">
+  <%= render partial:"users/userdetail", locals:{each: @user} %> 
+  <% @posts.each do |e|%>
+   <div class='inn'>
+     <%= link_to user_post_path(user_id: e.author_id, id: e.id) do %>
+     <%= render partial:"postdetails", locals:{post: e} %>
+       <div class='com'>
+        <% e.recent_comments.each do |single|%>
+          <p><%=single.user.name%>: <%= single.text%></p>  
+        <%end%>
+      </div>
+    <%end%>
+  </div>
+  <%end%>
+  <button class="btn">pagination</button>
+</div>

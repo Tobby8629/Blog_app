@@ -1,0 +1,17 @@
+<div class="ee">
+  <div class="old">
+    <%= render partial:"userdetail", locals: {each: @user} %>
+  </div>
+  <div class="bio">
+    <h3>Bio</h3>
+    <p> <%= @user.bio %></p>
+  </div>
+  <div>
+    <% @user.recent_post.each do |post|%>
+      <%= render partial:"posts/postdetails", locals: {post: post} %>
+    <%end%>
+  </div>
+  <button>
+    <%= link_to "see all post", user_posts_path(user_id: @user.id) %>
+  </button>
+</div>

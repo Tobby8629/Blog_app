@@ -1,0 +1,14 @@
+<div class='poo'>
+ <div class="fff">
+  <div class="flex-f">
+    <h3>post #<%= @post.id %> by <%= @post.user.name %></h3>
+    <p>comments: <%=@post.comments.length%>; likes: <%=@post.likes.length%></p>
+   </div>
+  <p><%= @post.text %></p>
+ </div> 
+ <div class="fxf">
+   <% @post.comments.each do |single|%>
+      <p><%=single.user.name%>: <%= single.text%></p>  
+  <%end%>
+</div>
+</div>
