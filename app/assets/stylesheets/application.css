@@ -1,3 +1,9 @@
+@import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Barlow:wght@200;300;400;500&family=Ubuntu:wght@300;400;700&display=swap');
+
+body {
+  font-family: 'Ubuntu', sans-serif;
+}
+
 .user {
   display: flex;
   align-items: center;
@@ -14,11 +20,73 @@
 
 .text {
   width: 75%;
-  border: 1px solid gray;
+  border: 2px solid gray;
   padding: 0.3rem;
   margin-bottom: 5px;
 }
 
 .text h4 {
   text-align: right;
+}
+
+.bio,
+.post,
+.com,
+.fff,
+.fxf {
+  border: 2px solid gray;
+  padding: 0 10px;
+  margin: 5px 0;
+}
+
+.com {
+  margin: 0;
+}
+
+.inn .com,
+.inn .post {
+  margin: 1px 0;
+}
+
+.bio p {
+  line-height: 25px;
+}
+
+.tes {
+  text-align: right;
+}
+
+button {
+  outline: none;
+  border: none;
+  display: block;
+  margin: 20px auto;
+  border-radius: 3px;
+  background-color: rgb(61, 60, 60);
+  padding: 10px;
+  color: whitesmoke;
+}
+
+a {
+  text-decoration: none;
+  color: black;
+}
+
+.ee a {
+  color: whitesmoke;
+  font-size: 20px;
+}
+
+.gen .inn {
+  margin: 2rem 0;
+}
+
+.flex-f {
+  display: flex;
+  justify-content: space-between;
+}
+
+.flex-f p,
+.flex-f h3 {
+  margin: 5px 0;
 }
