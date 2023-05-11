@@ -1,4 +1,5 @@
 <h3>create a new post</h3>
+<%= link_to 'Back', :back %>
 <%= form_with model: @post, url:user_posts_path do |form| %>
   <div class="input">
     <%= form.label :title %>
