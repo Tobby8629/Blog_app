@@ -1,4 +1,5 @@
 <div class="gen">
+  <%= link_to 'Back', :back %>
   <%= render partial:"users/userdetail", locals:{each: @user} %> 
   <% @posts.each do |e|%>
    <div class='inn'>

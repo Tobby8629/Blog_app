@@ -1,4 +1,5 @@
 <div class="ee">
+  <%= link_to 'Back', :back %>
   <div class="old">
     <%= render partial:"userdetail", locals: {each: @user} %>
   </div>
@@ -13,5 +14,8 @@
   </div>
   <button>
     <%= link_to "see all post", user_posts_path(user_id: @user.id) %>
+  </button>
+   <button>
+    <%= link_to "create new post ", new_user_post_path(user_id: @user.id) %>
   </button>
 </div>

@@ -1,4 +1,5 @@
 <div class='poo'>
+  <%= link_to 'Back', :back %>
  <div class="fff">
   <div class="flex-f">
     <h3>post #<%= @post.id %> by <%= @post.user.name %></h3>
@@ -8,7 +9,11 @@
  </div> 
  <div class="fxf">
    <% @post.comments.each do |single|%>
-      <p><%=single.user.name%>: <%= single.text%></p>  
+      <p><%=single.user.name%>: <%= single.text%></p>
   <%end%>
-</div>
+  <div class="likes">
+  <button><%= link_to "comment", new_post_comment_path(post_id: @post.id, user_id: @post.user.id) %></button>
+  <%= button_to "like", post_likes_path(post_id: @post.id, user_id: @post.user.id), method: :post %>
+  </div>
+</div> 
 </div>
