@@ -18,7 +18,7 @@ RSpec.describe 'Posts', type: :request do
   end
 
   describe 'GET /show' do
-    before(:example) { get user_post_path(1, 31)}
+    before(:example) { get user_post_path(1, 31) }
 
     it 'checks if action returns correct response status' do
       expect(response).to have_http_status(:ok)
