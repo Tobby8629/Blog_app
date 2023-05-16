@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Like, type: :model do
-  let(:user) { User.create(name: 'John Doe', posts_counter: 0) }
+  let(:user) { User.first }
   let(:post) { Post.create(author_id: user.id, title: 'hello world', comment_counter: 0, likes_counter: 0) }
   let(:like) { Like.new(author_id: user.id, post_id: post.id) }
 

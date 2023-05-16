@@ -73,6 +73,16 @@ a {
 }
 
 .ee a {
+  color: black;
+  font-size: 15px;
+}
+
+.likes a {
+  color: whitesmoke;
+  font-size: 18px;
+}
+
+.ee button a {
   color: whitesmoke;
   font-size: 20px;
 }
@@ -94,11 +104,6 @@ a {
 .likes {
   display: flex;
   flex-direction: row;
-}
-
-.likes a {
-  color: whitesmoke;
-  font-size: 18px;
 }
 
 .likes button {
