@@ -1,6 +1,11 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
+  before :each do
+    @user = User.create(name: 'young', photo: 'https://picsum.photos/id/23/200', bio: 'lorem ipsum text.', posts_counter: 0)
+    @user1 = User.create(name: 'trey', photo: 'https://picsum.photos/id/23/200', bio: 'Teacher from Mexico.', posts_counter: 0)
+  end
+
   describe 'GET /index' do
     before(:example) { get users_path }
 
@@ -18,7 +23,7 @@ RSpec.describe 'Users', type: :request do
   end
 
   describe 'GET /show' do
-    before(:example) { get user_path(1) }
+    before(:example) { get user_path(@user.id) }
 
     it 'checks if action returns correct response status' do
       expect(response).to have_http_status(:ok)
@@ -29,7 +34,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'checks if correct placeholder is shown' do
-      expect(response.body).to include('Hello')
+      expect(response.body).to include('Here is a user and it recent posts')
     end
   end
 end
