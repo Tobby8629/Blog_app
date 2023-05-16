@@ -37,5 +37,11 @@ RSpec.describe 'post', type: :system do
         expect(page).to have_text(e.user.name)
       end
     end
+
+    it "I can see the comment each commentor left." do
+      @post.comments.each do |e|
+        expect(page).to have_text(e.text)
+      end
+    end
   end
 end
