@@ -35057,3 +35057,479 @@ Processing by Devise::SessionsController#new as TURBO_STREAM
 Completed 200 OK in 41ms (Views: 30.4ms | ActiveRecord: 0.0ms | Allocations: 4189)
 
 
+Started GET "/admins/sign_in" for 127.0.0.1 at 2023-05-16 01:53:16 -0700
+Started GET "/" for 127.0.0.1 at 2023-05-16 01:53:27 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (8.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/admins/sign_in"):
+  
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (7.8ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Load (6.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:7
+  Rendered users/_userdetail.html.erb (Duration: 56.4ms | Allocations: 4420)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:7
+  Rendered users/_userdetail.html.erb (Duration: 43.3ms | Allocations: 2505)
+  Rendered users/index.html.erb within layouts/application (Duration: 234.0ms | Allocations: 10280)
+  Rendered layout layouts/application.html.erb (Duration: 380.5ms | Allocations: 25375)
+Completed 200 OK in 473ms (Views: 304.1ms | ActiveRecord: 102.0ms | Allocations: 27980)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-05-16 02:02:18 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (3.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Load (3.7ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:7
+  Rendered users/_userdetail.html.erb (Duration: 8.6ms | Allocations: 763)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:7
+  Rendered users/_userdetail.html.erb (Duration: 5.7ms | Allocations: 858)
+  Rendered users/index.html.erb within layouts/application (Duration: 226.9ms | Allocations: 5519)
+  Rendered layout layouts/application.html.erb (Duration: 250.0ms | Allocations: 7990)
+Completed 200 OK in 261ms (Views: 252.1ms | ActiveRecord: 32.4ms | Allocations: 8282)
+
+
+Started GET "/users/1/posts" for 127.0.0.1 at 2023-05-16 02:02:27 -0700
+Processing by PostsController#index as HTML
+  Parameters: {"user_id"=>"1"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/posts_controller.rb:3:in `index'
+  Rendering layout layouts/application.html.erb
+  Rendering posts/index.html.erb within layouts/application
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:7
+  Rendered users/_userdetail.html.erb (Duration: 5.1ms | Allocations: 851)
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/posts/index.html.erb:5
+  [1m[36mComment Load (8.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 1]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (6.9ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 1]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 124.7ms | Allocations: 10611)
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/views/posts/index.html.erb:11
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 11.2ms | Allocations: 1456)
+  [1m[36mComment Load (0.6ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.7ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 3]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 12.6ms | Allocations: 1455)
+  [1m[36mComment Load (0.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 4]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 4]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 10.9ms | Allocations: 1455)
+  Rendered posts/index.html.erb within layouts/application (Duration: 213.8ms | Allocations: 19975)
+  Rendered layout layouts/application.html.erb (Duration: 239.3ms | Allocations: 22527)
+Completed 200 OK in 279ms (Views: 205.1ms | ActiveRecord: 54.8ms | Allocations: 24324)
+
+
+Started GET "/users/1" for 127.0.0.1 at 2023-05-16 02:02:34 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:7
+  Rendered users/_userdetail.html.erb (Duration: 7.9ms | Allocations: 851)
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 12.4ms | Allocations: 1441)
+  [1m[36mComment Load (0.8ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 3]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 13.7ms | Allocations: 1441)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 4]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 4]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 11.0ms | Allocations: 1441)
+  Rendered users/show.html.erb within layouts/application (Duration: 53.6ms | Allocations: 5852)
+  Rendered layout layouts/application.html.erb (Duration: 74.6ms | Allocations: 8315)
+Completed 200 OK in 94ms (Views: 72.5ms | ActiveRecord: 5.7ms | Allocations: 9189)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-16 02:06:01 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:7
+  Rendered users/_userdetail.html.erb (Duration: 4.7ms | Allocations: 735)
+  [1m[36mPost Load (0.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:7
+  Rendered users/_userdetail.html.erb (Duration: 6.0ms | Allocations: 858)
+  Rendered users/index.html.erb within layouts/application (Duration: 18.8ms | Allocations: 2448)
+  Rendered layout layouts/application.html.erb (Duration: 44.1ms | Allocations: 4916)
+Completed 200 OK in 56ms (Views: 45.8ms | ActiveRecord: 2.0ms | Allocations: 5207)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-16 05:09:36 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (5.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/_userdetail.html.erb (Duration: 5.8ms | Allocations: 1686)
+  Rendered users/index.html.erb within layouts/application (Duration: 73.2ms | Allocations: 8078)
+  Rendered layout layouts/application.html.erb (Duration: 75.1ms | Allocations: 8172)
+Completed 500 Internal Server Error in 169ms (ActiveRecord: 20.1ms | Allocations: 14361)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `e' for #<ActionView::Base:0x0000000000bd60>):
+    1: <div class= "user">
+    2:   <div class = "image">
+    3:    <img src = <%= e.photo%> />
+    4:   </div>    
+    5:   <div class= "text">
+    6:     <h3><%= each.name %></h3>
+  
+app/views/users/_userdetail.html.erb:3
+app/views/users/index.html.erb:4
+app/views/users/index.html.erb:3
+app/views/users/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2023-05-16 05:09:39 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  Rendered users/_userdetail.html.erb (Duration: 3.1ms | Allocations: 1180)
+  Rendered users/index.html.erb within layouts/application (Duration: 8.7ms | Allocations: 1928)
+  Rendered layout layouts/application.html.erb (Duration: 10.1ms | Allocations: 2010)
+Completed 500 Internal Server Error in 18ms (ActiveRecord: 0.5ms | Allocations: 2284)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `e' for #<ActionView::Base:0x0000000000c0a8>):
+    1: <div class= "user">
+    2:   <div class = "image">
+    3:    <img src = <%= e.photo%> />
+    4:   </div>    
+    5:   <div class= "text">
+    6:     <h3><%= each.name %></h3>
+  
+app/views/users/_userdetail.html.erb:3
+app/views/users/index.html.erb:4
+app/views/users/index.html.erb:3
+app/views/users/index.html.erb:2
+Started GET "/" for 127.0.0.1 at 2023-05-16 05:09:58 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Load (5.2ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 102.1ms | Allocations: 7464)
+  [1m[36mPost Load (0.9ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 36.7ms | Allocations: 4452)
+  Rendered users/index.html.erb within layouts/application (Duration: 156.3ms | Allocations: 13088)
+  Rendered layout layouts/application.html.erb (Duration: 478.1ms | Allocations: 50465)
+Completed 200 OK in 516ms (Views: 487.3ms | ActiveRecord: 17.3ms | Allocations: 51280)
+
+
+Started GET "/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:09:59 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/tobby.jpg"):
+  
+Started GET "/" for 127.0.0.1 at 2023-05-16 05:14:00 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 4.6ms | Allocations: 735)
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 4.1ms | Allocations: 857)
+  Rendered users/index.html.erb within layouts/application (Duration: 14.6ms | Allocations: 2451)
+  Rendered layout layouts/application.html.erb (Duration: 28.8ms | Allocations: 4953)
+Completed 200 OK in 37ms (Views: 29.5ms | ActiveRecord: 1.5ms | Allocations: 5250)
+
+
+Started GET "/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:14:01 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/tobby.jpg"):
+  
+Started GET "/users/2" for 127.0.0.1 at 2023-05-16 05:14:43 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 3.3ms | Allocations: 725)
+  Rendered users/show.html.erb within layouts/application (Duration: 6.3ms | Allocations: 1330)
+  Rendered layout layouts/application.html.erb (Duration: 20.8ms | Allocations: 3835)
+Completed 200 OK in 37ms (Views: 22.4ms | ActiveRecord: 2.8ms | Allocations: 5649)
+
+
+Started GET "/users/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:14:44 -0700
+Processing by UsersController#show as JPEG
+  Parameters: {"id"=>"tobby"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 404 Not Found in 10ms (ActiveRecord: 0.3ms | Allocations: 962)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=tobby):
+  
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:29 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/tobby.jpg"):
+  
+Started GET "/users/1" for 127.0.0.1 at 2023-05-16 05:20:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 4.3ms | Allocations: 1007)
+  [1m[36mComment Load (5.0ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (2.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 245.9ms | Allocations: 18374)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.6ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 3]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 8.5ms | Allocations: 1437)
+  [1m[36mComment Load (0.5ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 4]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.5ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 4]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 7.1ms | Allocations: 1435)
+  Rendered users/show.html.erb within layouts/application (Duration: 274.0ms | Allocations: 23066)
+  Rendered layout layouts/application.html.erb (Duration: 289.7ms | Allocations: 25853)
+Completed 200 OK in 315ms (Views: 285.9ms | ActiveRecord: 15.8ms | Allocations: 27101)
+
+
+Started GET "/users/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:31 -0700
+Processing by UsersController#show as JPEG
+  Parameters: {"id"=>"tobby"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 404 Not Found in 10ms (ActiveRecord: 0.6ms | Allocations: 953)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=tobby):
+  
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:33 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/tobby.jpg"):
+  
+Started GET "/users/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:33 -0700
+Started GET "/users/2" for 127.0.0.1 at 2023-05-16 05:20:34 -0700
+Processing by UsersController#show as JPEG
+  Parameters: {"id"=>"tobby"}
+  [1m[36mUser Load (1.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 404 Not Found in 16ms (ActiveRecord: 1.6ms | Allocations: 971)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=tobby):
+  
+app/controllers/users_controller.rb:7:in `show'
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (4.3ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 9.3ms | Allocations: 729)
+  Rendered users/show.html.erb within layouts/application (Duration: 12.5ms | Allocations: 937)
+  Rendered layout layouts/application.html.erb (Duration: 35.3ms | Allocations: 3666)
+Completed 200 OK in 235ms (Views: 37.9ms | ActiveRecord: 32.1ms | Allocations: 34925)
+
+
+Started GET "/users/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:34 -0700
+Processing by UsersController#show as JPEG
+  Parameters: {"id"=>"tobby"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 404 Not Found in 19ms (ActiveRecord: 0.4ms | Allocations: 953)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=tobby):
+  
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:36 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/tobby.jpg"):
+  
+Started GET "/users/1" for 127.0.0.1 at 2023-05-16 05:20:37 -0700
+Started GET "/users/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:37 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mUser Load (0.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 1], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (2.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 10.6ms | Allocations: 856)
+  [1m[36mComment Load (2.7ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (4.2ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 2]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 13.7ms | Allocations: 1484)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 3]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.4ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 3]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 6.7ms | Allocations: 1451)
+  [1m[36mComment Load (0.4ms)[0m  [1m[34mSELECT "comments".* FROM "comments" WHERE "comments"."post_id" = $1[0m  [["post_id", 4]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  [1m[36mLike Load (0.8ms)[0m  [1m[34mSELECT "likes".* FROM "likes" WHERE "likes"."post_id" = $1[0m  [["post_id", 4]]
+  ↳ app/views/posts/_postdetails.html.erb:4
+  Rendered posts/_postdetails.html.erb (Duration: 8.4ms | Allocations: 1451)
+  Rendered users/show.html.erb within layouts/application (Duration: 45.3ms | Allocations: 5634)
+Processing by UsersController#show as JPEG
+  Parameters: {"id"=>"tobby"}
+  Rendered layout layouts/application.html.erb (Duration: 61.1ms | Allocations: 8441)
+Completed 200 OK in 80ms (Views: 53.4ms | ActiveRecord: 11.6ms | Allocations: 9316)
+
+
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 404 Not Found in 16ms (ActiveRecord: 0.3ms | Allocations: 1464)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=tobby):
+  
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/" for 127.0.0.1 at 2023-05-16 05:20:40 -0700
+Started GET "/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:40 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 5.6ms | Allocations: 738)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 10.2ms | Allocations: 872)
+  Rendered users/index.html.erb within layouts/application (Duration: 31.3ms | Allocations: 2685)
+  Rendered layout layouts/application.html.erb (Duration: 47.0ms | Allocations: 5284)
+Completed 200 OK in 62ms (Views: 46.4ms | ActiveRecord: 2.4ms | Allocations: 5639)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/tobby.jpg"):
+  
+Started GET "/users/2" for 127.0.0.1 at 2023-05-16 05:20:41 -0700
+Started GET "/users/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:41 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.4ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (1.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 5.1ms | Allocations: 730)
+  Rendered users/show.html.erb within layouts/application (Duration: 12.3ms | Allocations: 952)
+  Rendered layout layouts/application.html.erb (Duration: 23.5ms | Allocations: 3538)
+Completed 200 OK in 45ms (Views: 27.5ms | ActiveRecord: 2.2ms | Allocations: 4374)
+
+
+Processing by UsersController#show as JPEG
+  Parameters: {"id"=>"tobby"}
+  [1m[36mUser Load (0.6ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 404 Not Found in 12ms (ActiveRecord: 0.6ms | Allocations: 952)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=tobby):
+  
+app/controllers/users_controller.rb:7:in `show'
+Started GET "/" for 127.0.0.1 at 2023-05-16 05:20:42 -0700
+Started GET "/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:20:42 -0700
+Processing by UsersController#index as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  [1m[36mUser Load (2.3ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:2
+  [1m[36mPost Load (0.5ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 6.4ms | Allocations: 749)
+  [1m[36mPost Load (0.4ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 6.2ms | Allocations: 863)
+  Rendered users/index.html.erb within layouts/application (Duration: 27.8ms | Allocations: 2475)
+  Rendered layout layouts/application.html.erb (Duration: 44.8ms | Allocations: 5085)
+Completed 200 OK in 54ms (Views: 43.5ms | ActiveRecord: 3.2ms | Allocations: 5385)
+
+
+  
+ActionController::RoutingError (No route matches [GET] "/tobby.jpg"):
+  
+Started GET "/users/2" for 127.0.0.1 at 2023-05-16 05:21:30 -0700
+Started GET "/users/tobby.jpg" for 127.0.0.1 at 2023-05-16 05:21:30 -0700
+Processing by UsersController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mUser Load (0.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", 2], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+  Rendering layout layouts/application.html.erb
+  Rendering users/show.html.erb within layouts/application
+  [1m[36mPost Load (5.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 12.0ms | Allocations: 733)
+  Rendered users/show.html.erb within layouts/application (Duration: 13.9ms | Allocations: 941)
+  Rendered layout layouts/application.html.erb (Duration: 34.5ms | Allocations: 3544)
+Completed 200 OK in 53ms (Views: 31.0ms | ActiveRecord: 6.1ms | Allocations: 4374)
+
+
+Processing by UsersController#show as JPEG
+  Parameters: {"id"=>"tobby"}
+  [1m[36mUser Load (0.3ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 LIMIT $2[0m  [["id", nil], ["LIMIT", 1]]
+  ↳ app/controllers/users_controller.rb:7:in `show'
+Completed 404 Not Found in 15ms (ActiveRecord: 0.3ms | Allocations: 952)
+
+
+  
+ActiveRecord::RecordNotFound (Couldn't find User with 'id'=tobby):
+  
+app/controllers/users_controller.rb:7:in `show'
