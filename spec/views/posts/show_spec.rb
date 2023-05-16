@@ -31,5 +31,11 @@ RSpec.describe 'post', type: :system do
     it 'I can see the post body' do
       expect(page).to have_text(@post.text)
     end
+
+    it "I can see the username of each commentor." do
+      @post.comments.each do |e|
+        expect(page).to have_text(e.user.name)
+      end
+    end
   end
 end
