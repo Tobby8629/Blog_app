@@ -3,8 +3,7 @@ require 'rails_helper'
 RSpec.describe 'post', type: :system do
   describe 'show post' do
     before :each do
-      @user = User.create(name: 'young', photo: 'https://picsum.photos/id/23/200', bio: 'lorem ipsum text.',
-                          posts_counter: 0)
+      @user = User.first
       @post = Post.create(author_id: @user.id, title: 'Hello', text: 'This is my first post', comment_counter: 0,
                           likes_counter: 0)
       @comments = Comment.create(author_id: @user.id, post_id: @post.id, text: 'my first comment')

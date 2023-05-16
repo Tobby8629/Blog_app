@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe 'Users', type: :request do
-  let(:user) { User.create(name: 'young', photo: 'https://picsum.photos/id/23/200', bio: 'lorem ipsum text.', posts_counter: 0) }
+  let(:user) { User.first }
 
   describe 'GET /index' do
     before(:example) { get users_path }

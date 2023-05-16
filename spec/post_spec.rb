@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  user = User.create(name: 'John Doe', posts_counter: 0)
+  let(:user) { User.first }
   let(:post) { Post.new(author_id: user.id, title: 'hello world', comment_counter: 0, likes_counter: 0) }
 
   describe 'validation' do

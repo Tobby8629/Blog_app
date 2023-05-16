@@ -3,8 +3,7 @@ require 'rails_helper'
 RSpec.describe 'Post', type: :system do
   describe 'post index' do
     before :each do
-      @user = User.create(name: 'young', photo: 'https://picsum.photos/id/23/200', bio: 'lorem ipsum text.',
-                          posts_counter: 0)
+      @user = User.first
       @post = Post.create(author_id: @user.id, title: 'Hello', text: 'This is my first post', comment_counter: 0,
                           likes_counter: 0)
       @post1 = Post.create(author_id: @user.id, title: 'yello', text: 'This is my first post', comment_counter: 0,
