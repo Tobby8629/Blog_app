@@ -73,6 +73,11 @@ a {
 }
 
 .ee a {
+  color: black;
+  font-size: 15px;
+}
+
+.ee button a {
   color: whitesmoke;
   font-size: 20px;
 }

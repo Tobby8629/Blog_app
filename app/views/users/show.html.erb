@@ -10,7 +10,7 @@
   </div>
   <div>
     <% @user.recent_post.each do |post|%>
-      <%= render partial:"posts/postdetails", locals: {post: post} %>
+      <%= render partial:"posts/postdetails", locals: {post: post, user_id: @user.id} %>
     <%end%>
   </div>
   <button>
