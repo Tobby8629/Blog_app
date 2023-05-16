@@ -1,9 +1,8 @@
 require 'rails_helper'
 
 RSpec.describe Post, type: :model do
-  user = User.create(name: 'John Doe', posts_counter: 0)
-  let(:post) { Post.new(author_id: user.id, title: 'hello world', comment_counter: 0, likes_counter: 0) }
-
+  let(:user) { User.create(name: 'John Doe', posts_counter: 0) }
+  let(:post) { Post.new(author_id: user.id, title: 'hello world', text: "LOREM Ipsum whatever", comment_counter: 0, likes_counter: 0) }
   describe 'validation' do
     it 'validate the post model' do
       expect(post).to be_valid

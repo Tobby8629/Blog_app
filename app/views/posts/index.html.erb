@@ -1,4 +1,5 @@
 <h2>Here is the list of posts for a particular user</h2>
+<%= render "shared/sign" %>
 <div class="gen">
   <%= link_to 'Back', :back %>
   <%= render partial:"users/userdetail", locals:{each: @user} %> 

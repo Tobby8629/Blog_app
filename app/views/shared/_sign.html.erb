@@ -1,0 +1,7 @@
+<div>
+<%if admin_signed_in? %>
+  <%= link_to "sign out", destroy_admin_session_path, method: :delete %>
+<%else%>
+  <%= link_to "sign in", new_admin_session_path %>
+<%end%>
+</div>

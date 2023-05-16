@@ -29,7 +29,7 @@ RSpec.describe 'Users', type: :request do
     end
 
     it 'checks if correct placeholder is shown' do
-      expect(response.body).to include('Hello')
+      expect(response.body).to include('Here is a user and it recent posts')
     end
   end
 end
