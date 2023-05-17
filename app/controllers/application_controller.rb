@@ -1,5 +1,8 @@
 class ApplicationController < ActionController::Base
-  def current_user
-    User.first
-  end
+  before_action :authenticate_admin!
+  
+  protected
+
+  # def after_sign_in_path_for(resource)
+  # end
 end
