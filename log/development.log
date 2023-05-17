@@ -43778,3 +43778,13 @@ Processing by Users::SessionsController#new as HTML
 Completed 200 OK in 40ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 3524)
 
 
+Started GET "/users/sign_up" for ::1 at 2023-05-17 13:53:29 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 4.5ms | Allocations: 1347)
+  Rendered layout layouts/application.html.erb (Duration: 28.7ms | Allocations: 3658)
+Completed 200 OK in 41ms (Views: 31.2ms | ActiveRecord: 0.0ms | Allocations: 4295)
+
+
