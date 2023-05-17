@@ -43500,3 +43500,281 @@ Processing by Users::RegistrationsController#create as TURBO_STREAM
 Completed 422 Unprocessable Entity in 1039ms (Views: 121.9ms | ActiveRecord: 2.9ms | Allocations: 11858)
 
 
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 13:32:37 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.9ms | Allocations: 1463)
+  Rendered layout layouts/application.html.erb (Duration: 84.7ms | Allocations: 16097)
+Completed 200 OK in 308ms (Views: 88.3ms | ActiveRecord: 23.8ms | Allocations: 23708)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 13:33:31 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000020b38710378 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-1176-b6p07x.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :bio, :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000020b3809d680>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000020b38710378 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-1176-b6p07x.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (17.3ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 7.4ms | Allocations: 676)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 28.1ms | Allocations: 2463)
+  Rendered layout layouts/application.html.erb (Duration: 101.8ms | Allocations: 4776)
+Completed 422 Unprocessable Entity in 954ms (Views: 106.8ms | ActiveRecord: 18.6ms | Allocations: 10796)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 13:41:40 -0700
+  
+SyntaxError (C:/Users/HP/Desktop/module 5/Blog_app/app/controllers/application_controller.rb:2: syntax error, unexpected '\n', expecting =>
+C:/Users/HP/Desktop/module 5/Blog_app/app/controllers/application_controller.rb:7: syntax error, unexpected ',', expecting =>
+...sign_up, keys: [:name], [:bio], [:posts_counter], [:email], ...
+...                              ^
+C:/Users/HP/Desktop/module 5/Blog_app/app/controllers/application_controller.rb:8: syntax error, unexpected ',', expecting =>
+..._update, keys: [:name], [:bio], [:posts_counter], [:email], ...
+...                              ^
+):
+  
+app/controllers/application_controller.rb:2: syntax error, unexpected '\n', expecting =>
+app/controllers/application_controller.rb:7: syntax error, unexpected ',', expecting =>
+app/controllers/application_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/application_controller.rb:2: syntax error, unexpected '\n', expecting =>
+app/controllers/application_controller.rb:7: syntax error, unexpected ',', expecting =>
+app/controllers/application_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/application_controller.rb:2: syntax error, unexpected '\n', expecting =>
+app/controllers/application_controller.rb:7: syntax error, unexpected ',', expecting =>
+app/controllers/application_controller.rb:8: syntax error, unexpected ',', expecting =>
+app/controllers/users/registrations_controller.rb:3:in `<main>'
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 13:46:12 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 17)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1463)
+  Rendered layout layouts/application.html.erb (Duration: 104.9ms | Allocations: 16088)
+Completed 200 OK in 291ms (Views: 109.4ms | ActiveRecord: 22.6ms | Allocations: 23736)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 13:47:00 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000020b37f7aeb0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-1176-d3fpkp.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up"}
+[31mUnpermitted parameter: :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000020b37f5ebc0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000020b37f7aeb0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-1176-d3fpkp.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (11.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.8ms | Allocations: 373)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 9.1ms | Allocations: 1936)
+  Rendered layout layouts/application.html.erb (Duration: 37.9ms | Allocations: 4247)
+Completed 422 Unprocessable Entity in 692ms (Views: 40.0ms | ActiveRecord: 11.8ms | Allocations: 10281)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 13:48:48 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 17.4ms | Allocations: 2802)
+  Rendered layout layouts/application.html.erb (Duration: 21.1ms | Allocations: 2884)
+Completed 500 Internal Server Error in 80ms (ActiveRecord: 0.0ms | Allocations: 4162)
+
+
+  
+ActionView::Template::Error (undefined method `number_field_tag' for #<ActionView::Helpers::FormBuilder:0x0000020b37ac3de0 @nested_child_index={}, @options={:allow_method_names_outside_object=>false, :skip_default_ids=>false, :as=>:user, :html=>{:class=>"new_user", :id=>"new_user"}, :local=>true}, @template=#<ActionView::Base:0x0000000001f478>, @object=#<User id: nil, name: nil, bio: nil, photo: nil, posts_counter: nil, created_at: nil, updated_at: nil, email: "">, @object_name=:user, @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>false}, @default_html_options={}, @multipart=true, @index=nil>):
+    23: 
+    24:     <div class="field">
+    25:       <%= f.label :posts_counter, class: "label" %><br />
+    26:       <%= f.number_field_tag :posts_counter, value: 0, autofocus: true, placeholder: "posts_counter",autocomplete: "posts_counter" %>
+    27:     </div>
+    28: 
+    29:     <div class="field">
+  
+app/views/users/registrations/new.html.erb:26
+app/views/users/registrations/new.html.erb:4
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 13:49:08 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 347.0ms | Allocations: 13408)
+  Rendered layout layouts/application.html.erb (Duration: 368.4ms | Allocations: 16065)
+Completed 200 OK in 418ms (Views: 408.3ms | ActiveRecord: 0.0ms | Allocations: 17349)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 13:49:53 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000020b356040b8 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-1176-ted9ud.png>, @original_filename="time of execution query.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"time of execution query.png\"\r\nContent-Type: image/png\r\n">, "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+[31mUnpermitted parameter: :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000020b37decbc0>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000020b356040b8 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-1176-ted9ud.png>, @original_filename="time of execution query.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"time of execution query.png\"\r\nContent-Type: image/png\r\n">, "posts_counter"=>"0", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (4.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah@gmail.com"], ["LIMIT", 1]]
+  [1m[36mUser Create (6.6ms)[0m  [1m[32mINSERT INTO "users" ("name", "bio", "photo", "posts_counter", "created_at", "updated_at", "email", "encrypted_password", "reset_password_token", "reset_password_sent_at", "remember_created_at", "confirmation_token", "confirmed_at", "confirmation_sent_at", "unconfirmed_email") VALUES ($1, $2, $3, $4, $5, $6, $7, $8, $9, $10, $11, $12, $13, $14, $15) RETURNING "id"[0m  [["name", "tobby"], ["bio", "It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum."], ["photo", nil], ["posts_counter", 0], ["created_at", "2023-05-17 20:49:53.963840"], ["updated_at", "2023-05-17 20:49:53.963840"], ["email", "sarhmullah@gmail.com"], ["encrypted_password", "[FILTERED]"], ["reset_password_token", "[FILTERED]"], ["reset_password_sent_at", "[FILTERED]"], ["remember_created_at", nil], ["confirmation_token", "[FILTERED]"], ["confirmed_at", nil], ["confirmation_sent_at", "2023-05-17 20:49:53.964106"], ["unconfirmed_email", nil]]
+  [1m[36mTRANSACTION (1.7ms)[0m  [1m[35mCOMMIT[0m
+  Rendering C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/mailer/confirmation_instructions.html.erb
+  Rendered C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/mailer/confirmation_instructions.html.erb (Duration: 4.6ms | Allocations: 318)
+Devise::Mailer#confirmation_instructions: processed outbound mail in 316.8ms
+Delivered mail 64653df3c7ebb_4983aac684ae@DESKTOP-8NUFE17.mail (10273.7ms)
+Date: Wed, 17 May 2023 13:49:55 -0700
+From: please-change-me-at-config-initializers-devise@example.com
+Reply-To: please-change-me-at-config-initializers-devise@example.com
+To: sarhmullah@gmail.com
+Message-ID: <64653df3c7ebb_4983aac684ae@DESKTOP-8NUFE17.mail>
+Subject: Confirmation instructions
+Mime-Version: 1.0
+Content-Type: text/html;
+ charset=UTF-8
+Content-Transfer-Encoding: 7bit
+
+<p>Welcome sarhmullah@gmail.com!</p>
+
+<p>You can confirm your account email through the link below:</p>
+
+<p><a href="http://localhost:3000/users/confirmation?confirmation_token=JBNRGh_NRmCwgBk5mrvy">Confirm my account</a></p>
+
+Redirected to http://127.0.0.1:3000/
+Completed 303 See Other in 12872ms (ActiveRecord: 13.7ms | Allocations: 34522)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-17 13:50:06 -0700
+Processing by UsersController#index as TURBO_STREAM
+Completed 401 Unauthorized in 8ms (ActiveRecord: 0.0ms | Allocations: 381)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-05-17 13:50:06 -0700
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 8.8ms | Allocations: 916)
+  Rendered layout layouts/application.html.erb (Duration: 34.0ms | Allocations: 3306)
+Completed 200 OK in 92ms (Views: 75.6ms | ActiveRecord: 0.0ms | Allocations: 4689)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-05-17 13:50:29 -0700
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sarhmullah@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 1229ms (ActiveRecord: 2.0ms | Allocations: 12302)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-05-17 13:50:30 -0700
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 8.1ms | Allocations: 502)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 2814)
+Completed 200 OK in 60ms (Views: 43.8ms | ActiveRecord: 0.0ms | Allocations: 3522)
+
+
+Started GET "/users/confirmation?confirmation_token=[FILTERED]" for ::1 at 2023-05-17 13:51:06 -0700
+Processing by Devise::ConfirmationsController#show as HTML
+  Parameters: {"confirmation_token"=>"[FILTERED]"}
+  [1m[36mUser Load (2.2ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."confirmation_token" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["confirmation_token", "[FILTERED]"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (1.0ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Update (8.5ms)[0m  [1m[33mUPDATE "users" SET "updated_at" = $1, "confirmed_at" = $2 WHERE "users"."id" = $3[0m  [["updated_at", "2023-05-17 20:51:07.230260"], ["confirmed_at", "2023-05-17 20:51:07.229377"], ["id", 3]]
+  [1m[36mTRANSACTION (1.5ms)[0m  [1m[35mCOMMIT[0m
+Redirected to http://localhost:3000/users/sign_in
+Completed 302 Found in 162ms (ActiveRecord: 13.3ms | Allocations: 5300)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-17 13:51:07 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 502)
+  Rendered layout layouts/application.html.erb (Duration: 85.5ms | Allocations: 2814)
+Completed 200 OK in 160ms (Views: 108.3ms | ActiveRecord: 0.0ms | Allocations: 3525)
+
+
+Started POST "/users/sign_in" for ::1 at 2023-05-17 13:51:25 -0700
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sarhmullah@gmail.com"], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 595ms (ActiveRecord: 0.9ms | Allocations: 2703)
+
+
+Started GET "/" for ::1 at 2023-05-17 13:51:26 -0700
+Processing by UsersController#index as TURBO_STREAM
+  [1m[36mUser Load (0.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered shared/_sign.html.erb (Duration: 16.7ms | Allocations: 497)
+  [1m[36mUser Load (1.5ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mPost Load (6.6ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 447.1ms | Allocations: 10147)
+  [1m[36mPost Load (1.0ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 6.8ms | Allocations: 737)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 3]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 6.7ms | Allocations: 735)
+  Rendered users/index.html.erb within layouts/application (Duration: 535.7ms | Allocations: 13632)
+  Rendered layout layouts/application.html.erb (Duration: 570.3ms | Allocations: 16047)
+Completed 200 OK in 622ms (Views: 549.7ms | ActiveRecord: 43.8ms | Allocations: 18215)
+
+
+Started GET "/tobby.jpg" for ::1 at 2023-05-17 13:51:27 -0700
+Started GET "/" for ::1 at 2023-05-17 13:51:27 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/tobby.jpg"):
+  
+Processing by UsersController#index as HTML
+  [1m[36mUser Load (2.9ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+  Rendering layout layouts/application.html.erb
+  Rendering users/index.html.erb within layouts/application
+  Rendered shared/_sign.html.erb (Duration: 1.0ms | Allocations: 244)
+  [1m[36mUser Load (1.1ms)[0m  [1m[34mSELECT "users".* FROM "users"[0m
+  ↳ app/views/users/index.html.erb:3
+  [1m[36mPost Load (0.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 1]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 6.9ms | Allocations: 997)
+  [1m[36mPost Load (2.8ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 2]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 13.1ms | Allocations: 1472)
+  [1m[36mPost Load (1.1ms)[0m  [1m[34mSELECT "posts".* FROM "posts" WHERE "posts"."author_id" = $1[0m  [["author_id", 3]]
+  ↳ app/views/users/_userdetail.html.erb:8
+  Rendered users/_userdetail.html.erb (Duration: 11.0ms | Allocations: 839)
+  Rendered users/index.html.erb within layouts/application (Duration: 57.4ms | Allocations: 5290)
+  Rendered layout layouts/application.html.erb (Duration: 110.1ms | Allocations: 8259)
+Completed 200 OK in 130ms (Views: 108.6ms | ActiveRecord: 8.6ms | Allocations: 10622)
+
+
+Started DELETE "/users/sign_out" for ::1 at 2023-05-17 13:51:35 -0700
+Processing by Users::SessionsController#destroy as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]"}
+  [1m[36mUser Load (0.8ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."id" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["id", 3], ["LIMIT", 1]]
+Redirected to http://localhost:3000/
+Completed 303 See Other in 23ms (ActiveRecord: 0.8ms | Allocations: 2036)
+
+
+Started GET "/" for ::1 at 2023-05-17 13:51:36 -0700
+Processing by UsersController#index as TURBO_STREAM
+Completed 401 Unauthorized in 12ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-17 13:51:36 -0700
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.4ms | Allocations: 507)
+  Rendered layout layouts/application.html.erb (Duration: 29.6ms | Allocations: 2819)
+Completed 200 OK in 44ms (Views: 32.2ms | ActiveRecord: 0.0ms | Allocations: 3526)
+
+
+Started GET "/" for ::1 at 2023-05-17 13:51:41 -0700
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 10ms (ActiveRecord: 0.0ms | Allocations: 282)
+
+
+Started GET "/users/sign_in" for ::1 at 2023-05-17 13:51:41 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 2.1ms | Allocations: 501)
+  Rendered layout layouts/application.html.erb (Duration: 26.8ms | Allocations: 2813)
+Completed 200 OK in 40ms (Views: 29.1ms | ActiveRecord: 0.0ms | Allocations: 3524)
+
+
