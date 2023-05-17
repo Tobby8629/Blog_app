@@ -1,7 +1,7 @@
 require 'rails_helper'
 
 RSpec.describe User, type: :model do
-  let(:user) { User.new(name: 'tobby', posts_counter: 0) }
+  let(:user) { User.first }
 
   describe 'validations' do
     it 'is valid with a name' do

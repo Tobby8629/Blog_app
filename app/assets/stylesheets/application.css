@@ -1,6 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Barlow+Condensed:wght@300;400;500&family=Barlow:wght@200;300;400;500&family=Ubuntu:wght@300;400;700&display=swap');
 
-*{
+* {
   padding: 0;
   margin: 0;
   box-sizing: border-box;
@@ -8,6 +8,11 @@
 
 body {
   font-family: 'Ubuntu', sans-serif;
+  padding: 1rem;
+}
+
+h3 {
+  margin: 10px 0;
 }
 
 .user {
@@ -27,7 +32,7 @@ body {
 .text {
   width: 75%;
   border: 2px solid gray;
-  padding: 0.3rem;
+  padding: 1.5rem 10px;
   margin-bottom: 5px;
 }
 
@@ -39,9 +44,10 @@ body {
 .post,
 .com,
 .fff,
+.ff,
 .fxf {
   border: 2px solid gray;
-  padding: 0 10px;
+  padding: 10px;
   margin: 5px 0;
 }
 
@@ -55,7 +61,8 @@ body {
 }
 
 .bio p {
-  line-height: 25px;
+  line-height: 30px;
+  margin: 10px;
 }
 
 .tes {
@@ -78,9 +85,22 @@ a {
   color: black;
 }
 
-.ee a {
+.likes a {
   color: whitesmoke;
+  font-size: 18px;
+}
+
+.reg a {
+  color: rgb(0, 110, 255);
+  margin-left: 3px;
+}
+
+.ee a {
   font-size: 20px;
+}
+
+.ee button a {
+  color: whitesmoke;
 }
 
 .gen .inn {
@@ -94,17 +114,16 @@ a {
 
 .flex-f p,
 .flex-f h3 {
-  margin: 5px 0;
+  margin: 10px 0;
+}
+
+.ff p {
+  line-height: 30px;
 }
 
 .likes {
   display: flex;
   flex-direction: row;
-}
-
-.likes a {
-  color: whitesmoke;
-  font-size: 18px;
 }
 
 .likes button {
@@ -145,11 +164,10 @@ input {
   margin: 4rem auto;
 }
 
-.fff form, 
+.fff form,
 .field {
   width: 100%;
 }
-
 
 .field input {
   width: 100%;
@@ -160,16 +178,11 @@ input {
   width: 100%;
 }
 
-.actions input{
+.actions input {
   width: 100%;
   background-color: rgb(61, 60, 60);
   color: white;
   outline: none;
   border: none;
   border-radius: 5px;
-}
-
-.reg a {
-  color: rgb(0, 110, 255);
-  margin-left: 3px;
 }

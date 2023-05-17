@@ -1,10 +1,13 @@
 require 'rails_helper'
 
 RSpec.describe 'Posts', type: :request do
- let(:user) { User.create(name: 'John Doe', posts_counter: 0) }
- let(:post) { Post.create(author_id: user.id, title: 'hello world', text: "LOREM Ipsum whatever", comment_counter: 0, likes_counter: 0) }
+  let(:user) { User.first }
+  let(:post) do
+    Post.create(author_id: user.id, title: 'Hello', text: 'This is my first post', comment_counter: 0, likes_counter: 0)
+  end
+
   describe 'GET /index' do
-    before(:example) { get user_posts_path(1) }
+    before(:example) { get user_posts_path(user.id) }
 
     it 'checks if action returns correct response status' do
       expect(response).to have_http_status(:ok)
