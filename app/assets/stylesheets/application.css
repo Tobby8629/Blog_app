@@ -176,13 +176,11 @@ input {
   font-size: 20px;
 }
 
-
 .field input {
   width: 100%;
   border-radius: 5px;
   border: 2px solid grey;
 }
-
 
 .actions {
   width: 100%;
