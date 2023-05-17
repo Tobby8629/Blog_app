@@ -42356,3 +42356,1147 @@ Processing by Admins::SessionsController#new as HTML
 Completed 200 OK in 97ms (Views: 80.5ms | ActiveRecord: 0.0ms | Allocations: 3524)
 
 
+  [1m[35m (2.0ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.5ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropadminsTable (20230517145821)
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to DropadminsTable (20230517145821)
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mActiveRecord::SchemaMigration Create (6.1ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230517145821"]]
+  [1m[36mTRANSACTION (2.2ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.1ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (1.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admins/sign_in" for 127.0.0.1 at 2023-05-17 08:09:21 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[36mCACHE ActiveRecord::SchemaMigration Pluck (0.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActiveRecord::PendingMigrationError (
+
+Migrations are pending. To resolve this issue, run:
+
+        bin/rails db:migrate RAILS_ENV=development
+
+You have 1 pending migration:
+
+20230517150418_add_devise_to_users.rb
+
+
+):
+  
+activerecord (7.0.4.3) lib/active_record/migration.rb:627:in `check_pending!'
+activerecord (7.0.4.3) lib/active_record/migration.rb:592:in `block (2 levels) in call'
+activesupport (7.0.4.3) lib/active_support/file_update_checker.rb:83:in `execute'
+activesupport (7.0.4.3) lib/active_support/file_update_checker.rb:93:in `execute_if_updated'
+activerecord (7.0.4.3) lib/active_record/migration.rb:599:in `block in call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `synchronize'
+activerecord (7.0.4.3) lib/active_record/migration.rb:589:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+  [1m[35m (2.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20230517150418)
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (18.0ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (6.1ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp(6)[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp(6)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_token" character varying[0m
+  [1m[35m (0.4ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" timestamp(6)[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_sent_at" timestamp(6)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" character varying[0m
+  [1m[35m (17.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[35m (0.5ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20230517150418)
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (3.1ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (2.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20230517150418)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.9ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (2.8ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (1.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp(6)[0m
+  [1m[35m (1.3ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp(6)[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_token" character varying[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" timestamp(6)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_sent_at" timestamp(6)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" character varying[0m
+  [1m[35m (17.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mTRANSACTION (0.5ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.0ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[35m (0.3ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.7ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20230517150418)
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (6.2ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (4.9ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp(6)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp(6)[0m
+  [1m[35m (0.5ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_token" character varying[0m
+  [1m[35m (1.4ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" timestamp(6)[0m
+  [1m[35m (2.6ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_sent_at" timestamp(6)[0m
+  [1m[35m (0.6ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" character varying[0m
+  [1m[35m (7.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[35m (0.2ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.0ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddDeviseToUsers (20230517150418)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (7.0ms)[0m  [1m[35mALTER TABLE "users" ADD "email" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (1.1ms)[0m  [1m[35mALTER TABLE "users" ADD "encrypted_password" character varying DEFAULT '' NOT NULL[0m
+  [1m[35m (1.5ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_token" character varying[0m
+  [1m[35m (3.2ms)[0m  [1m[35mALTER TABLE "users" ADD "reset_password_sent_at" timestamp(6)[0m
+  [1m[35m (2.3ms)[0m  [1m[35mALTER TABLE "users" ADD "remember_created_at" timestamp(6)[0m
+  [1m[35m (0.7ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_token" character varying[0m
+  [1m[35m (0.9ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmed_at" timestamp(6)[0m
+  [1m[35m (1.0ms)[0m  [1m[35mALTER TABLE "users" ADD "confirmation_sent_at" timestamp(6)[0m
+  [1m[35m (0.8ms)[0m  [1m[35mALTER TABLE "users" ADD "unconfirmed_email" character varying[0m
+  [1m[35m (13.8ms)[0m  [1m[35mCREATE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[35m (7.5ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_reset_password_token" ON "users" ("reset_password_token")[0m
+  [1m[35m (4.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_confirmation_token" ON "users" ("confirmation_token")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (5.2ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230517150418"]]
+  [1m[36mTRANSACTION (2.8ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (1.8ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.6ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.4ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.6ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndex (20230517153916)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (5.3ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndex (20230517153916)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (2.5ms)[0m  [1m[35mDROP INDEX  "index_users_on_email"[0m
+  [1m[35m (23.6ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (2.8ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndex (20230517153916)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  [1m[35m (1.2ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_try_advisory_lock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Migrating to AddIndex (20230517153916)
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[35m (16.7ms)[0m  [1m[35mCREATE UNIQUE INDEX "index_users_on_email" ON "users" ("email")[0m
+  [1m[36mActiveRecord::SchemaMigration Create (4.3ms)[0m  [1m[32mINSERT INTO "schema_migrations" ("version") VALUES ($1) RETURNING "version"[0m  [["version", "20230517153916"]]
+  [1m[36mTRANSACTION (1.9ms)[0m  [1m[35mCOMMIT[0m
+  [1m[36mActiveRecord::InternalMetadata Load (2.7ms)[0m  [1m[34mSELECT "ar_internal_metadata".* FROM "ar_internal_metadata" WHERE "ar_internal_metadata"."key" = $1 LIMIT $2[0m  [["key", "environment"], ["LIMIT", 1]]
+  [1m[35m (0.4ms)[0m  [1m[34mSELECT pg_advisory_unlock(1508658759281986305)[0m
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.2ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Started GET "/admins/sign_in" for 127.0.0.1 at 2023-05-17 08:58:24 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (3.1ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+  
+ActionController::RoutingError (No route matches [GET] "/admins/sign_in"):
+  
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-05-17 08:58:46 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/shared/_links.html.erb (Duration: 102.0ms | Allocations: 831)
+  Rendered C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 272.9ms | Allocations: 3138)
+  Rendered layout layouts/application.html.erb (Duration: 505.7ms | Allocations: 18078)
+Completed 200 OK in 632ms (Views: 551.5ms | ActiveRecord: 25.0ms | Allocations: 25573)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-05-17 08:59:34 -0700
+Processing by Devise::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 26ms (ActiveRecord: 0.0ms | Allocations: 379)
+
+
+Processing by Devise::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]", "remember_me"=>"0"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/shared/_links.html.erb (Duration: 2.4ms | Allocations: 186)
+  Rendered C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 22.9ms | Allocations: 1238)
+  Rendered layout layouts/application.html.erb (Duration: 45.8ms | Allocations: 3531)
+Completed 200 OK in 614ms (Views: 50.7ms | ActiveRecord: 0.0ms | Allocations: 4859)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-17 08:59:39 -0700
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 10ms (ActiveRecord: 0.0ms | Allocations: 756)
+
+
+  
+NameError (uninitialized constant Admin):
+  
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+devise (4.9.2) lib/devise.rb:327:in `get'
+devise (4.9.2) lib/devise/mapping.rb:83:in `to'
+devise (4.9.2) lib/devise/strategies/rememberable.rb:56:in `remember_key'
+devise (4.9.2) lib/devise/strategies/rememberable.rb:60:in `remember_cookie'
+devise (4.9.2) lib/devise/strategies/rememberable.rb:15:in `valid?'
+warden (1.2.9) lib/warden/proxy.rb:367:in `block in _run_strategies_for'
+warden (1.2.9) lib/warden/proxy.rb:365:in `each'
+warden (1.2.9) lib/warden/proxy.rb:365:in `_run_strategies_for'
+warden (1.2.9) lib/warden/proxy.rb:335:in `_perform_authentication'
+warden (1.2.9) lib/warden/proxy.rb:133:in `authenticate!'
+devise (4.9.2) lib/devise/controllers/helpers.rb:118:in `authenticate_admin!'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+actiontext (7.0.4.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-05-17 08:59:40 -0700
+Processing by UsersController#index as HTML
+Completed 500 Internal Server Error in 6ms (ActiveRecord: 0.0ms | Allocations: 713)
+
+
+  
+NameError (uninitialized constant Admin):
+  
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `const_get'
+activesupport (7.0.4.3) lib/active_support/inflector/methods.rb:280:in `constantize'
+activesupport (7.0.4.3) lib/active_support/core_ext/string/inflections.rb:74:in `constantize'
+devise (4.9.2) lib/devise.rb:327:in `get'
+devise (4.9.2) lib/devise/mapping.rb:83:in `to'
+devise (4.9.2) lib/devise/strategies/rememberable.rb:56:in `remember_key'
+devise (4.9.2) lib/devise/strategies/rememberable.rb:60:in `remember_cookie'
+devise (4.9.2) lib/devise/strategies/rememberable.rb:15:in `valid?'
+warden (1.2.9) lib/warden/proxy.rb:367:in `block in _run_strategies_for'
+warden (1.2.9) lib/warden/proxy.rb:365:in `each'
+warden (1.2.9) lib/warden/proxy.rb:365:in `_run_strategies_for'
+warden (1.2.9) lib/warden/proxy.rb:335:in `_perform_authentication'
+warden (1.2.9) lib/warden/proxy.rb:133:in `authenticate!'
+devise (4.9.2) lib/devise/controllers/helpers.rb:118:in `authenticate_admin!'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:400:in `block in make_lambda'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:199:in `block (2 levels) in halting'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:34:in `block (2 levels) in <module:Callbacks>'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:200:in `block in halting'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `block in invoke_before'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `each'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:595:in `invoke_before'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:116:in `block in run_callbacks'
+actiontext (7.0.4.3) lib/action_text/rendering.rb:20:in `with_renderer'
+actiontext (7.0.4.3) lib/action_text/engine.rb:69:in `block (4 levels) in <class:Engine>'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:127:in `instance_exec'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:127:in `block in run_callbacks'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:138:in `run_callbacks'
+actionpack (7.0.4.3) lib/abstract_controller/callbacks.rb:233:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/rescue.rb:22:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:67:in `block in process_action'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `block in instrument'
+activesupport (7.0.4.3) lib/active_support/notifications/instrumenter.rb:24:in `instrument'
+activesupport (7.0.4.3) lib/active_support/notifications.rb:206:in `instrument'
+actionpack (7.0.4.3) lib/action_controller/metal/instrumentation.rb:66:in `process_action'
+actionpack (7.0.4.3) lib/action_controller/metal/params_wrapper.rb:259:in `process_action'
+activerecord (7.0.4.3) lib/active_record/railties/controller_runtime.rb:27:in `process_action'
+actionpack (7.0.4.3) lib/abstract_controller/base.rb:151:in `process'
+actionview (7.0.4.3) lib/action_view/rendering.rb:39:in `process'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:188:in `dispatch'
+actionpack (7.0.4.3) lib/action_controller/metal.rb:251:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:49:in `dispatch'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:50:in `block in serve'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `each'
+actionpack (7.0.4.3) lib/action_dispatch/journey/router.rb:32:in `serve'
+actionpack (7.0.4.3) lib/action_dispatch/routing/route_set.rb:852:in `call'
+warden (1.2.9) lib/warden/manager.rb:36:in `block in call'
+warden (1.2.9) lib/warden/manager.rb:34:in `catch'
+warden (1.2.9) lib/warden/manager.rb:34:in `call'
+rack (2.2.7) lib/rack/tempfile_reaper.rb:15:in `call'
+rack (2.2.7) lib/rack/etag.rb:27:in `call'
+rack (2.2.7) lib/rack/conditional_get.rb:27:in `call'
+rack (2.2.7) lib/rack/head.rb:12:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/permissions_policy.rb:38:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/http/content_security_policy.rb:36:in `call'
+rack (2.2.7) lib/rack/session/abstract/id.rb:266:in `context'
+rack (2.2.7) lib/rack/session/abstract/id.rb:260:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/cookies.rb:704:in `call'
+activerecord (7.0.4.3) lib/active_record/migration.rb:603:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:27:in `block in call'
+activesupport (7.0.4.3) lib/active_support/callbacks.rb:99:in `run_callbacks'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/callbacks.rb:26:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/actionable_exceptions.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/debug_exceptions.rb:28:in `call'
+web-console (4.2.0) lib/web_console/middleware.rb:132:in `call_app'
+web-console (4.2.0) lib/web_console/middleware.rb:28:in `block in call'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `catch'
+web-console (4.2.0) lib/web_console/middleware.rb:17:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/show_exceptions.rb:26:in `call'
+railties (7.0.4.3) lib/rails/rack/logger.rb:40:in `call_app'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `block in call'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `block in tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:37:in `tagged'
+activesupport (7.0.4.3) lib/active_support/tagged_logging.rb:99:in `tagged'
+railties (7.0.4.3) lib/rails/rack/logger.rb:25:in `call'
+sprockets-rails (3.4.2) lib/sprockets/rails/quiet_assets.rb:13:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/remote_ip.rb:93:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/request_id.rb:26:in `call'
+rack (2.2.7) lib/rack/method_override.rb:24:in `call'
+rack (2.2.7) lib/rack/runtime.rb:22:in `call'
+activesupport (7.0.4.3) lib/active_support/cache/strategy/local_cache_middleware.rb:29:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:61:in `block in call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:26:in `collect_events'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/server_timing.rb:60:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/executor.rb:14:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/static.rb:23:in `call'
+rack (2.2.7) lib/rack/sendfile.rb:110:in `call'
+actionpack (7.0.4.3) lib/action_dispatch/middleware/host_authorization.rb:137:in `call'
+railties (7.0.4.3) lib/rails/engine.rb:530:in `call'
+puma (5.6.5) lib/puma/configuration.rb:252:in `call'
+puma (5.6.5) lib/puma/request.rb:77:in `block in handle_request'
+puma (5.6.5) lib/puma/thread_pool.rb:340:in `with_force_shutdown'
+puma (5.6.5) lib/puma/request.rb:76:in `handle_request'
+puma (5.6.5) lib/puma/server.rb:443:in `process_client'
+puma (5.6.5) lib/puma/thread_pool.rb:147:in `block in spawn_thread'
+Started GET "/" for 127.0.0.1 at 2023-05-17 09:00:07 -0700
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 1002)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-05-17 09:00:15 -0700
+Processing by Devise::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/sessions/new.html.erb within layouts/application
+  Rendered C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/shared/_links.html.erb (Duration: 0.3ms | Allocations: 214)
+  Rendered C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views/devise/sessions/new.html.erb within layouts/application (Duration: 3.3ms | Allocations: 1364)
+  Rendered layout layouts/application.html.erb (Duration: 52.0ms | Allocations: 16021)
+Completed 200 OK in 73ms (Views: 54.3ms | ActiveRecord: 7.3ms | Allocations: 21246)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-05-17 09:08:03 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1861)
+  Rendered layout layouts/application.html.erb (Duration: 15.2ms | Allocations: 1943)
+Completed 500 Internal Server Error in 257ms (ActiveRecord: 24.2ms | Allocations: 10124)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_admin_registration_path' for #<ActionView::Base:0x0000000001fa68>):
+    26:     </div>
+    27:   <% end %>
+    28: 
+    29:   <p class='reg'>Not a user yet?<%= link_to " sign up",  new_admin_registration_path %> </p>
+    30: </div>
+  
+app/views/users/sessions/new.html.erb:29
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-05-17 09:08:39 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 5.7ms | Allocations: 895)
+  Rendered layout layouts/application.html.erb (Duration: 95.9ms | Allocations: 15820)
+Completed 200 OK in 151ms (Views: 144.4ms | ActiveRecord: 0.0ms | Allocations: 17186)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:08:59 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 12.7ms | Allocations: 234)
+  Rendered users/shared/_links.html.erb (Duration: 4.2ms | Allocations: 643)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 38.9ms | Allocations: 2607)
+  Rendered layout layouts/application.html.erb (Duration: 53.8ms | Allocations: 5004)
+Completed 200 OK in 83ms (Views: 76.2ms | ActiveRecord: 0.0ms | Allocations: 6234)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:10:37 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 18.5ms | Allocations: 1703)
+  Rendered layout layouts/application.html.erb (Duration: 20.3ms | Allocations: 1785)
+Completed 500 Internal Server Error in 73ms (ActiveRecord: 0.0ms | Allocations: 3042)
+
+
+  
+ActionView::Template::Error (Missing partial admins/shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/HP/Desktop/module 5/Blog_app/app/views"
+  * "C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views"
+  * "C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/actiontext-7.0.4.3/app/views"
+  * "C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/actionmailbox-7.0.4.3/app/views"
+):
+    2:   <h2>Sign up</h2>
+    3: 
+    4:   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    5:     <%= render "admins/shared/error_messages", resource: resource %>
+    6: 
+    7:     <div class="field">
+    8:       <%= f.email_field :email, autofocus: true,  placeholder: "email",autocomplete: "email" %>
+  
+app/views/users/registrations/new.html.erb:5
+app/views/users/registrations/new.html.erb:4
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:11:16 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 13.5ms | Allocations: 1341)
+  Rendered layout layouts/application.html.erb (Duration: 47.4ms | Allocations: 4018)
+Completed 200 OK in 96ms (Views: 88.4ms | ActiveRecord: 0.0ms | Allocations: 5290)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:17:56 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 4.2ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 32.1ms | Allocations: 2104)
+  Rendered layout layouts/application.html.erb (Duration: 34.4ms | Allocations: 2186)
+Completed 500 Internal Server Error in 84ms (Allocations: 3447)
+
+
+  
+ActionView::Template::Error (undefined method `name_field' for #<ActionView::Helpers::FormBuilder:0x000001eeb8b491c0 @nested_child_index={}, @options={:allow_method_names_outside_object=>false, :skip_default_ids=>false, :as=>:user, :html=>{:class=>"new_user", :id=>"new_user"}, :local=>true}, @template=#<ActionView::Base:0x000000000204e0>, @object=#<User id: nil, name: nil, bio: nil, photo: nil, posts_counter: nil, created_at: nil, updated_at: nil, email: "">, @object_name=:user, @default_options={:skip_default_ids=>false, :allow_method_names_outside_object=>false}, @default_html_options={}, @multipart=nil, @index=nil>):
+     5:     <%= render "users/shared/error_messages", resource: resource %>
+     6: 
+     7:     <div class="field">
+     8:       <%= f.name_field :name, autofocus: true,  placeholder: "name",autocomplete: "name" %>
+     9:     </div>
+    10: 
+    11:     <div class="field">
+  
+app/views/users/registrations/new.html.erb:8
+app/views/users/registrations/new.html.erb:4
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:23:32 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 11.2ms | Allocations: 1460)
+  Rendered layout layouts/application.html.erb (Duration: 12.7ms | Allocations: 1543)
+Completed 500 Internal Server Error in 71ms (Allocations: 2806)
+
+
+  
+ActionView::SyntaxErrorInTemplate (Encountered a syntax error while rendering template: check <div class="fff">
+  <h2>Sign up</h2>
+
+  <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    <%= render "users/shared/error_messages", resource: resource %>
+
+    <div class="field">
+      <%= f.text_field :name, autofocus: true,  placeholder: "name",autocomplete: "name" %>
+    </div>
+
+    <div class="field">
+      <%= f.email_field :email, autofocus: true,  placeholder: "email",autocomplete: "email" %>
+    </div>
+
+    <div class="field">
+      <%= f.text_area :bio, autofocus: true,  placeholder: "bio",autocomplete: "bio" %>
+    </div>
+
+    <div class="field">
+      <%= f.file_field :photo, autofocus: true,  placeholder: "photo",autocomplete: "photo" %>
+    </div>
+
+    <div class="field">
+      <%= number_field_tag :posts_counter, value: 0 autofocus: true,  placeholder: "posts_counter",autocomplete: "posts_counter" %>
+    </div>
+
+    
+
+    <div class="field">
+       <% if @minimum_password_length %>
+      <em>(<%= @minimum_password_length %> characters minimum)</em>
+      <% end %><br />
+      <%= f.password_field :password,  placeholder: "password",autocomplete: "new-password" %>
+    </div>
+
+    <div class="field">
+      <%= f.password_field :password_confirmation,  placeholder: "confirm password",autocomplete: "new-password" %>
+    </div>
+
+    <div class="actions">
+      <%= f.submit "Sign up" %>
+    </div>
+  <% end %>
+  <p class='reg'> Already have an account? <%= link_to "log in", new_user_session_path %> </p>
+<div>
+
+):
+1:    <div class="fff">
+2:      <h2>Sign up</h2>
+3:    
+4:      <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+5:        <%= render "users/shared/error_messages", resource: resource %>
+6:    
+7:        <div class="field">
+8:          <%= f.text_field :name, autofocus: true,  placeholder: "name",autocomplete: "name" %>
+9:        </div>
+10:    
+11:        <div class="field">
+12:          <%= f.email_field :email, autofocus: true,  placeholder: "email",autocomplete: "email" %>
+13:        </div>
+14:    
+15:        <div class="field">
+16:          <%= f.text_area :bio, autofocus: true,  placeholder: "bio",autocomplete: "bio" %>
+17:        </div>
+18:    
+19:        <div class="field">
+20:          <%= f.file_field :photo, autofocus: true,  placeholder: "photo",autocomplete: "photo" %>
+21:        </div>
+22:    
+23:        <div class="field">
+24:          <%= number_field_tag :posts_counter, value: 0 autofocus: true,  placeholder: "posts_counter",autocomplete: "posts_counter" %>
+25:        </div>
+26:    
+27:        
+28:    
+29:        <div class="field">
+30:           <% if @minimum_password_length %>
+31:          <em>(<%= @minimum_password_length %> characters minimum)</em>
+32:          <% end %><br />
+33:          <%= f.password_field :password,  placeholder: "password",autocomplete: "new-password" %>
+34:        </div>
+35:    
+36:        <div class="field">
+37:          <%= f.password_field :password_confirmation,  placeholder: "confirm password",autocomplete: "new-password" %>
+38:        </div>
+39:    
+40:        <div class="actions">
+41:          <%= f.submit "Sign up" %>
+42:        </div>
+43:      <% end %>
+44:      <p class='reg'> Already have an account? <%= link_to "log in", new_user_session_path %> </p>
+45:    <div>
+  
+app/views/users/registrations/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/registrations/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/registrations/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/registrations/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/registrations/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+app/views/users/registrations/new.html.erb:24: syntax error, unexpected local variable or method, expecting ')'
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:24:18 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 376.3ms | Allocations: 13261)
+  Rendered layout layouts/application.html.erb (Duration: 403.7ms | Allocations: 15938)
+Completed 200 OK in 470ms (Views: 464.5ms | Allocations: 17219)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:25:42 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 3.4ms | Allocations: 1017)
+  Rendered layout layouts/application.html.erb (Duration: 140.5ms | Allocations: 4905)
+Completed 200 OK in 153ms (Views: 143.1ms | Allocations: 5528)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:27:41 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.3ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 17.3ms | Allocations: 1998)
+  Rendered layout layouts/application.html.erb (Duration: 159.4ms | Allocations: 6191)
+Completed 200 OK in 224ms (Views: 217.7ms | Allocations: 7480)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:29:57 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.0ms | Allocations: 1167)
+  Rendered layout layouts/application.html.erb (Duration: 99.2ms | Allocations: 5063)
+Completed 200 OK in 128ms (Views: 119.8ms | Allocations: 5672)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:31:35 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.9ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 15.3ms | Allocations: 2139)
+  Rendered layout layouts/application.html.erb (Duration: 32.2ms | Allocations: 4792)
+Completed 200 OK in 100ms (Views: 90.2ms | Allocations: 6087)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:31:58 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 22.4ms | Allocations: 2170)
+  Rendered layout layouts/application.html.erb (Duration: 49.8ms | Allocations: 4816)
+Completed 200 OK in 92ms (Views: 84.9ms | Allocations: 6073)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:34:18 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9a36048 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-fk21ub.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :bio, :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000001eeb9d31360>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9a36048 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-fk21ub.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.7ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (8.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 25.1ms | Allocations: 849)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 36.6ms | Allocations: 2639)
+  Rendered layout layouts/application.html.erb (Duration: 256.5ms | Allocations: 6525)
+Completed 422 Unprocessable Entity in 1352ms (Views: 273.6ms | ActiveRecord: 43.1ms | Allocations: 17405)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:34:21 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 25.5ms | Allocations: 1345)
+  Rendered layout layouts/application.html.erb (Duration: 112.2ms | Allocations: 3664)
+Completed 200 OK in 138ms (Views: 119.3ms | ActiveRecord: 0.0ms | Allocations: 4266)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-05-17 09:35:19 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 891)
+  Rendered layout layouts/application.html.erb (Duration: 33.5ms | Allocations: 3277)
+Completed 200 OK in 112ms (Views: 92.9ms | ActiveRecord: 0.0ms | Allocations: 4380)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-05-17 09:35:23 -0700
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 14ms (ActiveRecord: 0.0ms | Allocations: 340)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.3ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 30.5ms | Allocations: 2798)
+Completed 200 OK in 388ms (Views: 35.0ms | ActiveRecord: 0.0ms | Allocations: 3373)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-05-17 09:35:24 -0700
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 50ms (ActiveRecord: 0.0ms | Allocations: 341)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 2.2ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 152.2ms | Allocations: 2798)
+Completed 200 OK in 198ms (Views: 171.1ms | ActiveRecord: 0.0ms | Allocations: 3338)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-05-17 09:35:31 -0700
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 332)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.6ms | Allocations: 494)
+  Rendered layout layouts/application.html.erb (Duration: 56.2ms | Allocations: 2829)
+Completed 200 OK in 391ms (Views: 66.9ms | ActiveRecord: 0.0ms | Allocations: 3404)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:35:35 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.0ms | Allocations: 14)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 4.8ms | Allocations: 1321)
+  Rendered layout layouts/application.html.erb (Duration: 74.3ms | Allocations: 3667)
+Completed 200 OK in 104ms (Views: 81.0ms | ActiveRecord: 0.0ms | Allocations: 4298)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:36:04 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9033e38 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-qnw0qu.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :bio, :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000001eeba265660>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9033e38 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-qnw0qu.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.7ms | Allocations: 1043)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 9.3ms | Allocations: 3074)
+  Rendered layout layouts/application.html.erb (Duration: 28.3ms | Allocations: 5387)
+Completed 422 Unprocessable Entity in 409ms (Views: 30.7ms | ActiveRecord: 1.5ms | Allocations: 11023)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:36:29 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9ff5ec0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-tzmv5d.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :bio, :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000001eeb9ef4760>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9ff5ec0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-tzmv5d.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (2.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 673)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 14.6ms | Allocations: 2455)
+  Rendered layout layouts/application.html.erb (Duration: 76.0ms | Allocations: 4767)
+Completed 422 Unprocessable Entity in 484ms (Views: 80.0ms | ActiveRecord: 3.3ms | Allocations: 10323)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:37:02 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9f9abb0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-4br4fn.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :bio, :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000001eeb8bef700>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9f9abb0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-4br4fn.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (3.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.1ms | Allocations: 673)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 12.6ms | Allocations: 2455)
+  Rendered layout layouts/application.html.erb (Duration: 65.1ms | Allocations: 4766)
+Completed 422 Unprocessable Entity in 568ms (Views: 68.0ms | ActiveRecord: 4.3ms | Allocations: 10318)
+
+
+Started GET "/users" for 127.0.0.1 at 2023-05-17 09:37:24 -0700
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 6ms (ActiveRecord: 0.0ms | Allocations: 277)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-05-17 09:37:24 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 1.2ms | Allocations: 501)
+  Rendered layout layouts/application.html.erb (Duration: 15.3ms | Allocations: 2813)
+Completed 200 OK in 24ms (Views: 16.9ms | ActiveRecord: 0.0ms | Allocations: 3497)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:37:27 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 0.1ms | Allocations: 14)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 4.3ms | Allocations: 1321)
+  Rendered layout layouts/application.html.erb (Duration: 19.9ms | Allocations: 3640)
+Completed 200 OK in 34ms (Views: 21.6ms | ActiveRecord: 0.0ms | Allocations: 4243)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:37:30 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"", "bio"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"", "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :bio. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000001eeb8944258>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"", "bio"=>"", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.7ms | Allocations: 1315)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 7.5ms | Allocations: 3573)
+  Rendered layout layouts/application.html.erb (Duration: 20.7ms | Allocations: 5915)
+Completed 422 Unprocessable Entity in 37ms (Views: 23.4ms | ActiveRecord: 0.0ms | Allocations: 8291)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:37:55 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb90336b8 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-78by6f.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :bio, :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000001eebab0c818>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb90336b8 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-78by6f.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.7ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.4ms | Allocations: 673)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.3ms | Allocations: 2455)
+  Rendered layout layouts/application.html.erb (Duration: 72.1ms | Allocations: 4768)
+Completed 422 Unprocessable Entity in 433ms (Views: 75.4ms | ActiveRecord: 1.2ms | Allocations: 10338)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:39:05 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.8ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 29.3ms | Allocations: 2313)
+  Rendered layout layouts/application.html.erb (Duration: 33.9ms | Allocations: 2395)
+Completed 500 Internal Server Error in 97ms (ActiveRecord: 0.0ms | Allocations: 3655)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `users_admin_session_path' for #<ActionView::Base:0x00000000021d90>):
+    23:       <%= f.submit "Sign up" %>
+    24:     </div>
+    25:   <% end %>
+    26:   <p class='reg'> Already have an account? <%= link_to "log in", users_admin_session_path %> </p>
+    27: <div>
+  
+app/views/users/registrations/new.html.erb:26
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:39:26 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.6ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 12.0ms | Allocations: 2309)
+  Rendered layout layouts/application.html.erb (Duration: 15.9ms | Allocations: 2391)
+Completed 500 Internal Server Error in 76ms (ActiveRecord: 0.0ms | Allocations: 3652)
+
+
+  
+ActionView::Template::Error (undefined local variable or method `new_users_session_path' for #<ActionView::Base:0x00000000022150>):
+    23:       <%= f.submit "Sign up" %>
+    24:     </div>
+    25:   <% end %>
+    26:   <p class='reg'> Already have an account? <%= link_to "log in", new_users_session_path %> </p>
+    27: <div>
+  
+app/views/users/registrations/new.html.erb:26
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:39:37 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.0ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 9.0ms | Allocations: 1336)
+  Rendered layout layouts/application.html.erb (Duration: 32.6ms | Allocations: 4013)
+Completed 200 OK in 94ms (Views: 85.4ms | ActiveRecord: 0.0ms | Allocations: 5297)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:39:57 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.0ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 7.1ms | Allocations: 994)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 30.3ms | Allocations: 1891)
+  Rendered layout layouts/application.html.erb (Duration: 115.3ms | Allocations: 4202)
+Completed 422 Unprocessable Entity in 643ms (Views: 166.5ms | ActiveRecord: 1.6ms | Allocations: 10053)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:40:05 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sarhmullah15@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.2ms | Allocations: 992)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.8ms | Allocations: 1887)
+  Rendered layout layouts/application.html.erb (Duration: 31.0ms | Allocations: 4198)
+Completed 422 Unprocessable Entity in 361ms (Views: 38.5ms | ActiveRecord: 1.0ms | Allocations: 9691)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:40:13 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"sarhmullah15@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.2ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.2ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 2.6ms | Allocations: 1291)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 6.2ms | Allocations: 2419)
+  Rendered layout layouts/application.html.erb (Duration: 20.5ms | Allocations: 4730)
+Completed 422 Unprocessable Entity in 46ms (Views: 22.0ms | ActiveRecord: 1.6ms | Allocations: 10199)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:40:35 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 3.0ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 13.8ms | Allocations: 1337)
+  Rendered layout layouts/application.html.erb (Duration: 44.0ms | Allocations: 3983)
+Completed 200 OK in 95ms (Views: 89.3ms | ActiveRecord: 0.0ms | Allocations: 5275)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:40:50 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (0.9ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.9ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 1.2ms | Allocations: 675)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 5.5ms | Allocations: 1326)
+  Rendered layout layouts/application.html.erb (Duration: 56.8ms | Allocations: 3637)
+Completed 422 Unprocessable Entity in 554ms (Views: 75.1ms | ActiveRecord: 2.2ms | Allocations: 9432)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 09:41:26 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 4.3ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 17.8ms | Allocations: 2143)
+  Rendered layout layouts/application.html.erb (Duration: 55.3ms | Allocations: 4821)
+Completed 200 OK in 134ms (Views: 126.5ms | ActiveRecord: 0.0ms | Allocations: 6106)
+
+
+Started GET "/admins/sign_in" for 127.0.0.1 at 2023-05-17 09:41:45 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/admins/sign_in"):
+  
+Started GET "/admins/sign_in" for 127.0.0.1 at 2023-05-17 09:41:47 -0700
+  
+ActionController::RoutingError (No route matches [GET] "/admins/sign_in"):
+  
+Started POST "/users" for 127.0.0.1 at 2023-05-17 09:42:18 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9f94fd0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-4j18qk.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :bio, :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x000001eebab0ec58>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x000001eeb9f94fd0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-23220-4j18qk.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.3ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (0.8ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 4.1ms | Allocations: 994)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 31.0ms | Allocations: 3027)
+  Rendered layout layouts/application.html.erb (Duration: 86.9ms | Allocations: 5369)
+Completed 422 Unprocessable Entity in 457ms (Views: 95.5ms | ActiveRecord: 1.5ms | Allocations: 11343)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 13:01:49 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 13.6ms | Allocations: 1674)
+  Rendered layout layouts/application.html.erb (Duration: 15.1ms | Allocations: 1756)
+Completed 500 Internal Server Error in 51ms (Allocations: 2995)
+
+
+  
+ActionView::Template::Error (Missing partial admins/shared/_error_messages with {:locale=>[:en], :formats=>[:html], :variants=>[], :handlers=>[:raw, :erb, :html, :builder, :ruby, :jbuilder]}.
+
+Searched in:
+  * "C:/Users/HP/Desktop/module 5/Blog_app/app/views"
+  * "C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/turbo-rails-1.4.0/app/views"
+  * "C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/devise-4.9.2/app/views"
+  * "C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/actiontext-7.0.4.3/app/views"
+  * "C:/Users/HP/.local/share/gem/ruby/3.2.0/gems/actionmailbox-7.0.4.3/app/views"
+):
+    2:   <h2>Sign up</h2>
+    3: 
+    4:   <%= form_for(resource, as: resource_name, url: registration_path(resource_name)) do |f| %>
+    5:     <%= render "admins/shared/error_messages", resource: resource %>
+    6: 
+    7:     <div class="field">
+    8:       <%= f.email_field :email, autofocus: true,  placeholder: "email",autocomplete: "email" %>
+  
+app/views/users/registrations/new.html.erb:5
+app/views/users/registrations/new.html.erb:4
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 13:02:28 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 4.2ms | Allocations: 225)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 13.9ms | Allocations: 1336)
+  Rendered layout layouts/application.html.erb (Duration: 30.6ms | Allocations: 4013)
+Completed 200 OK in 63ms (Views: 55.6ms | Allocations: 5276)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 13:02:50 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "commit"=>"Sign up"}
+  [1m[36mTRANSACTION (2.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (24.1ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.4ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 5.6ms | Allocations: 675)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 11.3ms | Allocations: 1326)
+  Rendered layout layouts/application.html.erb (Duration: 48.6ms | Allocations: 3637)
+Completed 422 Unprocessable Entity in 1174ms (Views: 53.7ms | ActiveRecord: 78.2ms | Allocations: 12364)
+
+
+Started GET "/" for 127.0.0.1 at 2023-05-17 13:17:12 -0700
+  [1m[36mActiveRecord::SchemaMigration Pluck (5.3ms)[0m  [1m[34mSELECT "schema_migrations"."version" FROM "schema_migrations" ORDER BY "schema_migrations"."version" ASC[0m
+Processing by UsersController#index as HTML
+Completed 401 Unauthorized in 189ms (ActiveRecord: 0.0ms | Allocations: 2719)
+
+
+Started GET "/users/sign_in" for 127.0.0.1 at 2023-05-17 13:17:14 -0700
+Processing by Users::SessionsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 165.1ms | Allocations: 1858)
+  Rendered layout layouts/application.html.erb (Duration: 2860.1ms | Allocations: 48652)
+Completed 200 OK in 3226ms (Views: 3099.1ms | ActiveRecord: 31.7ms | Allocations: 61203)
+
+
+Started POST "/users/sign_in" for 127.0.0.1 at 2023-05-17 13:17:42 -0700
+Processing by Users::SessionsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  [1m[36mUser Load (8.7ms)[0m  [1m[34mSELECT "users".* FROM "users" WHERE "users"."email" = $1 ORDER BY "users"."id" ASC LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+Completed 401 Unauthorized in 144ms (ActiveRecord: 9.3ms | Allocations: 3508)
+
+
+Processing by Users::SessionsController#new as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"email"=>"Sarhmullah15@gmail.com", "password"=>"[FILTERED]"}, "commit"=>"Log in"}
+  Rendering layout layouts/application.html.erb
+  Rendering users/sessions/new.html.erb within layouts/application
+  Rendered users/sessions/new.html.erb within layouts/application (Duration: 2.3ms | Allocations: 504)
+  Rendered layout layouts/application.html.erb (Duration: 75.7ms | Allocations: 2811)
+Completed 200 OK in 1372ms (Views: 84.3ms | ActiveRecord: 0.0ms | Allocations: 4161)
+
+
+Started GET "/users/sign_up" for 127.0.0.1 at 2023-05-17 13:17:47 -0700
+Processing by Users::RegistrationsController#new as HTML
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 10.0ms | Allocations: 238)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 97.2ms | Allocations: 2997)
+  Rendered layout layouts/application.html.erb (Duration: 185.6ms | Allocations: 5396)
+Completed 200 OK in 291ms (Views: 277.7ms | ActiveRecord: 0.0ms | Allocations: 6626)
+
+
+Started POST "/users" for 127.0.0.1 at 2023-05-17 13:19:09 -0700
+Processing by Users::RegistrationsController#create as TURBO_STREAM
+  Parameters: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000020b380400c0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-1176-eei0v5.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up"}
+[31mUnpermitted parameters: :name, :bio, :photo. Context: { controller: Users::RegistrationsController, action: create, request: #<ActionDispatch::Request:0x0000020b38096060>, params: {"authenticity_token"=>"[FILTERED]", "user"=>{"name"=>"tobby", "email"=>"Sarhmullah15@gmail.com", "bio"=>"It was popularised in the 1960s with the release of Letraset sheets containing Lorem Ipsum passages, and more recently with desktop publishing software like Aldus PageMaker including versions of Lorem Ipsum.", "photo"=>#<ActionDispatch::Http::UploadedFile:0x0000020b380400c0 @tempfile=#<Tempfile:C:/Users/HP/AppData/Local/Temp/RackMultipart20230517-1176-eei0v5.png>, @original_filename="after n+1.png", @content_type="image/png", @headers="Content-Disposition: form-data; name=\"user[photo]\"; filename=\"after n+1.png\"\r\nContent-Type: image/png\r\n">, "password"=>"[FILTERED]", "password_confirmation"=>"[FILTERED]"}, "posts_counter"=>"0", "commit"=>"Sign up", "controller"=>"users/registrations", "action"=>"create"} }[0m
+  [1m[36mTRANSACTION (0.6ms)[0m  [1m[35mBEGIN[0m
+  [1m[36mUser Exists? (1.5ms)[0m  [1m[34mSELECT 1 AS one FROM "users" WHERE "users"."email" = $1 LIMIT $2[0m  [["email", "sarhmullah15@gmail.com"], ["LIMIT", 1]]
+  [1m[36mTRANSACTION (0.8ms)[0m  [1m[31mROLLBACK[0m
+  Rendering layout layouts/application.html.erb
+  Rendering users/registrations/new.html.erb within layouts/application
+  Rendered users/shared/_error_messages.html.erb (Duration: 9.1ms | Allocations: 849)
+  Rendered users/registrations/new.html.erb within layouts/application (Duration: 31.5ms | Allocations: 2636)
+  Rendered layout layouts/application.html.erb (Duration: 115.8ms | Allocations: 4949)
+Completed 422 Unprocessable Entity in 1039ms (Views: 121.9ms | ActiveRecord: 2.9ms | Allocations: 11858)
+
+
