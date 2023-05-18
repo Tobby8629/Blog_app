@@ -1,11 +1,12 @@
 <h2>Here is the list of posts for a particular user</h2>
+<%= render "shared/sign" %>
 <div class="gen">
   <%= link_to 'Back', :back %>
   <%= render partial:"users/userdetail", locals:{each: @user} %> 
   <% @posts.each do |e|%>
    <div class='inn'>
      <%= link_to user_post_path(user_id: e.author_id, id: e.id) do %>
-     <%= render partial:"postdetails", locals:{user_id:e.author_id, post: e} %>
+     <%= render partial:"postdetails", locals:{user_id:e.user.id, post: e,} %>
        <div class='com'>
         <% e.recent_comments.each do |single|%>
           <p><%=single.user.name%>: <%= single.text%></p>  

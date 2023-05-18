@@ -1,3 +1,4 @@
+<%= render "shared/sign" %>
 <h2>Here is a user and it recent posts</h2>
 <div class="ee">
   <%= link_to 'Back', :back %>
@@ -10,7 +11,7 @@
   </div>
   <div>
     <% @user.recent_post.each do |post|%>
-      <%= render partial:"posts/postdetails", locals: {post: post, user_id: @user.id} %>
+      <%= render partial:"posts/postdetails", locals: {user_id:post.user.id, post: post} %>
     <%end%>
   </div>
   <button>
